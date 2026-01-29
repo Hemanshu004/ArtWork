@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/artworks?page=${page}`)
+    fetch(`https://api.artic.edu/api/v1/artworks?page=${page}&limit=12`)
       .then(r => r.json())
       .then((res: ApiResponse) => {
         setRows(res.data);
